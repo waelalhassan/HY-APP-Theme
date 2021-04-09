@@ -1,0 +1,132 @@
+doctype html 
+html(lang="en")
+    head 
+        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content="")
+        meta(name="keywords", content="")
+        title design-1 
+        link(rel="stylesheet", href="css/bootstrap-grid.min.css")
+        link(rel="stylesheet", href="css/style.css")
+    body 
+        //-start header
+        header 
+            .container 
+                nav
+                    .logo
+                        h1: a(href="#") logo
+                    ul
+                        li.item: a(href="#") Home
+                        li.item: a(href="#") About
+                        li.item: a(href="contact.html") Contact Us
+                .hero 
+                    .sec-1
+                        h2 New E-commerce App #[br] best for You
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime repellendus quisquam labore repellat assumenda exercitationem accusantium optio cupiditate accusamus, itaque eos magni veniam quod libero velit? Aliquam animi nulla repudiandae?
+                        .download-btn 
+                            .android 
+                                a(href="#"): img(src="images/down-android.svg", alt="download for android")
+                            .ios 
+                                a(href="#"): img(src="images/down-ios.svg", alt="download for ios") 
+                    .sec-2 
+                        picture
+                            img(src="images/mockup1 3.svg", alt="phone app")
+                            img(src="images/mockup1 3.svg", alt="phone app")
+        //-end header
+
+        //-start section one
+        section.sec-one 
+            .container 
+                .grid-two-four 
+                    h2 What we do to help #[br] our customers in #[br] digital reo.
+                    div(class="card card-1")
+                        img(src="images/3.svg")
+                        h3 Send
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, libero a. Debitis voluptas quos enim tenetur. Alias numquam aliquam, excepturi porro reiciendis..
+                        a(href="#") learn more #[img(src="images/ic_arrow_forward_24px.svg")]
+                    div(class="card card-2")
+                        img(src="images/1 (1).svg")
+                        h3 Receive
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, libero a. Debitis voluptas quos enim tenetur. Alias numquam aliquam, excepturi porro reiciendis..
+                        a(href="#") learn more #[img(src="images/ic_arrow_forward_24px.svg")]
+                    div(class="card card-3")
+                        img(src="images/2 20.svg")
+                        h3 Buy
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, libero a. Debitis voluptas quos enim tenetur. Alias numquam aliquam, excepturi porro reiciendis..
+                        a(href="#") learn more #[img(src="images/ic_arrow_forward_24px.svg")]
+            .dt 
+                img(src="images/dot-1.svg")
+                img(src="images/dot-2.svg")
+                img(src="images/dot-3.svg")
+                img(src="images/1.svg")
+        //-end section one
+
+        //-start section two
+        section.sec-two 
+            .container 
+                h2 How it works
+                div(class="row s-2") 
+                    .col-sm-4
+                        img(src="images/carbon_security.svg", alt="")
+                        h3 Create an account
+                        p Lorem ipsum dolor sit amet consectetur adipisicing..
+                    .col-sm-4
+                        img(src="images/Z.svg", alt="")
+                        h3 Get authorization
+                        p Lorem ipsum dolor sit amet consectetur adipisicing..
+                    .col-sm-4
+                        img(src="images/heroicons-outline_emoji-happy.svg", alt="")
+                        h3 Enjoy the app
+                        p Lorem ipsum dolor sit amet consectetur adipisicing..
+        //-end section two
+
+        //-start section three
+        section.sec-three 
+            .container 
+                h2 What our client say
+                div(class="row quot")
+                    div(class="col-sm-6 quot-col-1")
+                        img(src="images/image.svg", alt="")
+                    div(class="col-sm-6 quot-col-2")
+                        img(src="images/fa-solid_quote-left.svg", alt="")
+                        .items-quot
+                            .item
+                                blockquote Amet in elementum nulla scelerisque dui, egestas at. Elit consectetur turpis elementum amet vitae et etiam nec. Varius volutpat hac adipiscing tincidunt pretium.
+                                span Angel Paulina
+                        .control 
+                            button(class="prev active"): img(src="images/left-arrow.svg")
+                            button(class="next"): img(src="images/right-arrow.svg")
+            img(class="s-three-dot", src="images/dot-1.svg")
+        //-end section three
+
+        //-start section four
+        section.sec-four 
+            .container 
+                div(class="row down-app")
+                    div(class="col-sm-6 c-four-left")
+                        img(src="images/mockup1 3.svg")
+                        img(src="images/mockup1 3.svg")
+                        img(src="images/mockup1 3.svg")
+                    div(class="col-sm-6 c-four-right")
+                        h2 Download app to enjoy more!
+                        p Amet in elementum nulla scelerisque dui, egestas at. Elit consectetur turpis elementum amet vitae et etiam nec. Varius volutpat hac adipiscing tincidunt pretium.
+                        .down-androi-ios 
+                            a(href="#"): img(src="images/btn-android-black.svg", alt="download the app for android")
+                            a(href="#"): img(src="images/btn-iphone-black.svg", alt="download the app for ios")                
+        //-end section four
+
+        //-start footer
+        include footer.pug
+        //-end footer
+
+
+
+
+
+
+
+
+
+
+        // scripts
+        script(src="js/main.js") 

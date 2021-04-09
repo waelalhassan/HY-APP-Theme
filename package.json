@@ -1,0 +1,24 @@
+{
+  "name": "design-1",
+  "version": "1.0.0",
+  "description": "design on figma ",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "init": "^0.1.2"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wael alhassan",
+  "license": "ISC"
+}
