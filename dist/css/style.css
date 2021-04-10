@@ -217,15 +217,13 @@ header {
     align-content: flex-end; }
     .sec-three .quot .quot-col-2 .items-quot {
       margin: 0 0 70px 0; }
-      .sec-three .quot .quot-col-2 .items-quot .item {
-        width: 418px; }
-        .sec-three .quot .quot-col-2 .items-quot .item blockquote {
-          color: #0F001A;
-          line-height: 24px;
-          margin: 30px 0;
-          opacity: .7; }
-        .sec-three .quot .quot-col-2 .items-quot .item span {
-          font-weight: bold; }
+      .sec-three .quot .quot-col-2 .items-quot .item blockquote {
+        color: #0F001A;
+        line-height: 24px;
+        margin: 30px 0;
+        opacity: .7; }
+      .sec-three .quot .quot-col-2 .items-quot .item span {
+        font-weight: bold; }
     .sec-three .quot .quot-col-2 .control button {
       width: 80px;
       height: 80px;
@@ -240,6 +238,7 @@ header {
     .sec-three .quot .quot-col-2 .control .next {
       transform: translateX(80px); }
     .sec-three .quot .quot-col-2 .control .active {
+      transition: all .3s ease-in;
       background-color: #4A99D3; }
       .sec-three .quot .quot-col-2 .control .active img {
         filter: grayscale(0%) blur(0px) sepia(1) saturate(0) opacity(1) brightness(200%) contrast(100%) invert(0%); }

@@ -299,7 +299,6 @@ header {
             .items-quot {
                 margin:0 0 70px 0;
                 .item {
-                    width: 418px;
                     blockquote {
                         color: $text-color;
                         line-height: 24px;
@@ -330,6 +329,7 @@ header {
                     transform: translateX(80px);
                 }
                 .active {
+                    transition: all .3s ease-in;
                     background-color: $main-color;
                     img {
                         filter: grayscale(0%) blur(0px) sepia(1) saturate(0) opacity(1) brightness(200%) contrast(100%) invert(0%);
