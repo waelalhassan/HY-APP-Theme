@@ -11,7 +11,7 @@
   </head>
   <body> 
     <!-- add new class for about page for styling-->
-    <header style="box-shadow: none">
+    <header style="box-shadow: none; height: 850px">
       <div class="container"> 
         <nav>
           <div class="logo">
@@ -28,21 +28,36 @@
     <section class="contact"> 
       <div class="container"> 
         <h2>Get In Touch</h2>
-        <div class="rwo get-in-touch">
+        <div class="row get-in-touch">
           <div class="col-sm-6">
             <h3>Leave us a message</h3>
             <form>
-              <input type="text" name="name" placeholder="Full Name"/>
-              <input type="email" name="email" placeholder="Email Address"/>
-              <textarea></textarea>
-              <input type="submit" value="Send" placeholder="Your Message"/>
+              <input type="text" name="name"/><span class="placeholder-name">Full Name</span>
+              <input type="email" name="email"/><span class="placeholder-email">Email Address </span>
+              <textarea></textarea><span class="placeholder-message">Your Message</span>
+              <input type="submit" value="Send"/>
             </form>
           </div>
           <div class="col-sm-6">
             <div class="info-contact">
-              <address><img src="#" alt=""/> Infomation technologies building, Victoria Island Lagos, Nigeria</address>
-              <p><img src="#" alt=""/> +234 081-1236-4568</p>
-              <p><img src="#" alt=""/> hello@info.com</p>
+              <ul class="info-c">
+                <li><img src="images/icons/location.svg" alt=""/> 
+                  <p>Infomation technologies building, Victoria Island Lagos, Nigeria</p>
+                </li>
+                <li><img src="images/icons/phone.svg" alt=""/> 
+                  <p>+234 081-1236-4568</p>
+                </li>
+                <li><img src="images/icons/message.svg" alt=""/> 
+                  <p>hello@info.com</p>
+                </li>
+              </ul>
+              <ul class="social-media">
+                <li><a href="#"><img src="images/icons/Youtube.svg" alt="Youtube"/></a></li>
+                <li><a href="#"><img src="images/icons/Instagram.svg" alt="Instagram"/></a></li>
+                <li><a href="#"><img src="images/icons/Facebook.svg" alt="Facebook"/></a></li>
+                <li><a href="#"><img src="images/icons/Twitter.svg" alt="Twitter"/></a></li>
+              </ul>
+              <div class="address-on-map"> <img src="" alt=""/></div>
             </div>
           </div>
         </div>
@@ -100,5 +115,7 @@
         </div>
       </div>
     </footer>
+    <!-- scripts-->
+    <script src="js/main.js"> </script>
   </body>
 </html>

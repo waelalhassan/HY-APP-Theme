@@ -13,7 +13,7 @@ html(lang="en")
         // add new class for about page for styling
 
         //-start header
-        header(style="box-shadow: none")
+        header(style="box-shadow: none; height: 850px")
             .container 
                 nav
                     .logo
@@ -27,22 +27,34 @@ html(lang="en")
         section.contact 
             .container 
                 h2 Get In Touch
-                div(class="rwo get-in-touch")
+                div(class="row get-in-touch")
                     .col-sm-6
                         h3 Leave us a message
                         form
-                            input(type="text", name="name", placeholder="Full Name") 
-                            input(type="email", name="email", placeholder="Email Address") 
+                            input(type="text", name="name")
+                            span.placeholder-name Full Name
+                            input(type="email", name="email")
+                            span.placeholder-email Email Address 
                             textarea
-                            input(type="submit", value="Send", placeholder="Your Message") 
+                            span.placeholder-message Your Message
+                            input(type="submit", value="Send") 
                     .col-sm-6
                         div(class="info-contact")
-                            address #[img(src="#", alt="")] Infomation technologies building, Victoria Island Lagos, Nigeria
-                            p #[img(src="#", alt="")] +234 081-1236-4568
-                            p #[img(src="#", alt="")] hello@info.com
-
+                            ul.info-c
+                                li #[img(src="images/icons/location.svg", alt="")] #[p Infomation technologies building, Victoria Island Lagos, Nigeria]
+                                li #[img(src="images/icons/phone.svg", alt="")] #[p +234 081-1236-4568]
+                                li #[img(src="images/icons/message.svg", alt="")] #[p hello@info.com]
+                            ul.social-media
+                                li: a(href="#"): img(src="images/icons/Youtube.svg", alt="Youtube") 
+                                li: a(href="#"): img(src="images/icons/Instagram.svg", alt="Instagram") 
+                                li: a(href="#"): img(src="images/icons/Facebook.svg", alt="Facebook") 
+                                li: a(href="#"): img(src="images/icons/Twitter.svg", alt="Twitter") 
+                            .address-on-map 
+                                img(src="", alt="")
                             
         //-start footer
         include footer.pug
         //-end footer
 
+        // scripts
+        script(src="js/main.js") 
