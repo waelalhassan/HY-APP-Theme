@@ -78,13 +78,15 @@ checkIfInputNotImpty(InputEmail, "PreventPlaceholderEmail", parentForm);
 checkIfInputNotImpty(textarea, "PreventPlaceholderTextarea", parentForm);
 
 function checkIfInputNotImpty(ele, className, parent) {
-    ele.addEventListener("blur", ()=> {
-        if (!(ele.value === "")) {
-            parent.classList.add(className)
-        } else {
-            parent.classList.remove(className)
-        }
-    })
+    if (ele) {
+        ele.addEventListener("blur", ()=> {
+            if (!(ele.value === "")) {
+                parent.classList.add(className)
+            } else {
+                parent.classList.remove(className)
+            }
+        })
+    }
 }
 //? end fix input text and email & textarea when blur [line 33 in contact.pug]
 
@@ -111,7 +113,9 @@ insertB(WarningEmail, InputEmail);
 insertB(WarningTextarea, textarea);
 
 function insertB (ele, position) {
-    Form.insertBefore(ele, position)
+    if (Form) {
+        Form.insertBefore(ele, position)
+    }
 };
 // add class for each element
 WarningClassName(WarningText ,"WarningText");
