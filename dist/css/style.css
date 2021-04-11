@@ -513,5 +513,18 @@ footer {
       list-style-type: none; }
     .contact .get-in-touch .info-contact .address-on-map {
       display: block; }
+  .contact .PreventPlaceholderName .placeholder-name,
+  .contact .PreventPlaceholderEmail .placeholder-email {
+    transform: translateY(-89px) !important;
+    font-weight: bold !important;
+    background-color: #FFF !important;
+    color: #000 !important;
+    z-index: 1 !important; }
+  .contact .PreventPlaceholderTextarea .placeholder-message {
+    transform: translateY(-151px) !important;
+    font-weight: bold !important;
+    background-color: #FFF !important;
+    color: #000 !important;
+    z-index: 1 !important; }
 
 /*# sourceMappingURL=style.css.map */

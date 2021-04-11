@@ -67,17 +67,23 @@ count--;
 }
 //? end custom carousel [line 92 in index.pug]
 
-//? start fix input text and email when blur [line 33 in contact.pug]
+//? start fix input text and email & textarea when blur [line 33 in contact.pug]
+let InputText = document.querySelector("#inputText"),
+    InputEmail = document.querySelector("#inputEmail"),
+    textarea = document.querySelector("#textArea"),
+    parentForm = document.querySelector(".get-in-touch");
 
-// let text = document.querySelector(".get-in-touch input[type='text']");
-// let parentForm = document.querySelector(".get-in-touch");
+checkIfInputNotImpty(InputText, "PreventPlaceholderName", parentForm);
+checkIfInputNotImpty(InputEmail, "PreventPlaceholderEmail", parentForm);
+checkIfInputNotImpty(textarea, "PreventPlaceholderTextarea", parentForm);
 
-// text.addEventListener("blur", ()=> {
-//     if (!(text.value === "")) {
-//         parentForm.classList.add("preventSpan");
-//     } else {
-//         parentForm.classList.remove("preventSpan");
-//     }
-// })
-
-//? end fix input text and email when focus [line 33 in contact.pug]
+function checkIfInputNotImpty(ele, className, parent) {
+    ele.addEventListener("blur", ()=> {
+        if (!(ele.value === "")) {
+            parent.classList.add(className)
+        } else {
+            parent.classList.remove(className)
+        }
+    })
+}
+//? end fix input text and email & textarea when blur [line 33 in contact.pug]

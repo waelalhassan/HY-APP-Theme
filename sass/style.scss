@@ -690,13 +690,22 @@ footer {
             }
         }
     }
-    // .preventSpan .placeholder-name {
-    //     transform: translateY(-89px) !important;
-    //     font-weight: bold !important;
-    //     background-color: #FFF !important;
-    //     color: #000 !important;
-    //     z-index: 1 !important;
-    // }
+
+    .PreventPlaceholderName .placeholder-name,
+    .PreventPlaceholderEmail .placeholder-email {
+        transform: translateY(-89px) !important;
+        font-weight: bold !important;
+        background-color: #FFF !important;
+        color: #000 !important;
+        z-index: 1 !important;
+    }
+    .PreventPlaceholderTextarea .placeholder-message {
+        transform: translateY(-151px) !important;
+        font-weight: bold !important;
+        background-color: #FFF !important;
+        color: #000 !important;
+        z-index: 1 !important;
+    }
 }
 
 // end contact
