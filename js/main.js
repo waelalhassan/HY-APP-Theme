@@ -87,3 +87,88 @@ function checkIfInputNotImpty(ele, className, parent) {
     })
 }
 //? end fix input text and email & textarea when blur [line 33 in contact.pug]
+
+//? start Failed Input [line 33 in contact.pug]
+// submit button
+let sub = document.querySelector("#sub");
+// form tag
+let Form = document.querySelector(".get-in-touch form");
+// create elements for warning
+let WarningText = document.createElement("span");
+let WarningEmail = document.createElement("span");
+let WarningTextarea = document.createElement("span");
+// change textContent 
+theText(WarningText, "Please enter your name");
+theText(WarningEmail, "Please enter your email");
+theText(WarningTextarea, "Leave your message here !");
+
+function theText (ele, text) {
+    ele.textContent = text;
+};
+// put element before inputs
+insertB(WarningText, InputText);
+insertB(WarningEmail, InputEmail);
+insertB(WarningTextarea, textarea);
+
+function insertB (ele, position) {
+    Form.insertBefore(ele, position)
+};
+// add class for each element
+WarningClassName(WarningText ,"WarningText");
+WarningClassName(WarningEmail ,"WarningEmail");
+WarningClassName(WarningTextarea ,"WarningTextarea");
+
+function WarningClassName(ele, className) {
+    ele.className = className;
+};
+// change position for each element, with some properties
+WarinigStyle(WarningText, "55px");
+WarinigStyle(WarningEmail, "155px");
+WarinigStyle(WarningTextarea, "340px");
+
+function WarinigStyle(ele, top) {
+    ele.style.position = "absolute";
+    ele.style.top = top;
+    ele.style.left = "-15px";
+    ele.style.color = 'red';
+    ele.style.padding = '10px';
+    ele.style.borderRadius = '4px';
+    ele.style.display = "none";
+}
+// add event click on submit button
+if (sub) {
+    sub.addEventListener("click", function(e) {
+        // check if text field and email and textarea is empty
+        if (InputText.value === "" || InputEmail.value === "" || textarea.value === ""){
+            // stop sending
+            e.preventDefault();
+        } if (InputText.value === "") {
+            // change border to red color for text field
+            InputText.style.borderColor = "red";
+            // show warning for text field
+            WarningText.style.display = "block";
+        } else {
+            // set default border color 
+            InputText.style.borderColor = "";
+            // remove warning for text field
+            WarningText.style.display = "none";
+        }
+        
+        if (InputEmail.value === "") {
+            InputEmail.style.borderColor = "red";
+            WarningEmail.style.display = "block";
+        } else {
+            InputEmail.style.borderColor = "";
+            WarningEmail.style.display = "none";
+        }
+        
+        if (textarea.value === "") {
+            textarea.style.borderColor = "red";
+            WarningTextarea.style.display = "block";
+        } else {
+            textarea.style.borderColor = "";
+            WarningTextarea.style.display = "none";
+        }
+    })
+}
+//? end Failed Input [line 33 in contact.pug]
