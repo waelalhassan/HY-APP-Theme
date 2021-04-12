@@ -176,3 +176,44 @@ if (sub) {
     })
 }
 //? end Failed Input [line 33 in contact.pug]
+
+//? start hamburger menu
+let headerP = document.querySelector("header");
+let header = document.querySelector("header .menu");
+let nav = document.querySelector("nav");
+let ul = document.querySelector("nav ul");
+
+let ParentHamburger = document.createElement("div");
+let lineOne = document.createElement("span");
+let lineTwo = document.createElement("span");
+let lineThree = document.createElement("span");
+ParentHamburger.classList.add("ParentHamburger");
+
+ParentHamburger.appendChild(lineOne)
+ParentHamburger.appendChild(lineTwo)
+ParentHamburger.appendChild(lineThree)
+
+nav.appendChild(ParentHamburger)
+
+let clone = ParentHamburger.cloneNode(true);
+
+clone.classList.add("close")
+ul.appendChild(clone)
+
+if (ParentHamburger) {
+    ParentHamburger.addEventListener("click", ()=> {
+        ul.style.left = "0"
+    })
+}
+if (clone) {
+    clone.addEventListener("click", ()=> {
+        ul.style.left = "-100%"
+    })
+}
+
+//? end hamburger menu
+
+
+
+
+

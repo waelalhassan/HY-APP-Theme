@@ -11,7 +11,7 @@ html(lang="en")
     body 
         //-start header
         header 
-            .container 
+            div(class="container menu") 
                 nav
                     .logo
                         h1: a(href="#") logo
@@ -21,7 +21,7 @@ html(lang="en")
                         li.item: a(href="contact.html") Contact Us
                 .hero 
                     .sec-1
-                        h2 New E-commerce App #[br] best for You
+                        h2 New E-commerce App best for You
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime repellendus quisquam labore repellat assumenda exercitationem accusantium optio cupiditate accusamus, itaque eos magni veniam quod libero velit? Aliquam animi nulla repudiandae?
                         .download-btn 
                             .android 
@@ -66,15 +66,15 @@ html(lang="en")
             .container 
                 h2 How it works
                 div(class="row s-2") 
-                    .col-sm-4
+                    div(class="col-12 col-md-4")
                         img(src="images/carbon_security.svg", alt="")
                         h3 Create an account
                         p Lorem ipsum dolor sit amet consectetur adipisicing..
-                    .col-sm-4
+                    div(class="col-12 col-md-4")
                         img(src="images/Z.svg", alt="")
                         h3 Get authorization
                         p Lorem ipsum dolor sit amet consectetur adipisicing..
-                    .col-sm-4
+                    div(class="col-12 col-md-4")
                         img(src="images/heroicons-outline_emoji-happy.svg", alt="")
                         h3 Enjoy the app
                         p Lorem ipsum dolor sit amet consectetur adipisicing..
@@ -85,9 +85,9 @@ html(lang="en")
             .container 
                 h2 What our client say
                 div(class="row quot")
-                    div(class="col-sm-6 quot-col-1")
+                    div(class="col-12 col-md-12 col-lg-6 quot-col-1")
                         img(src="images/image.svg", alt="")
-                    div(class="col-sm-6 quot-col-2")
+                    div(class="col-12 col-md-12 col-lg-6 quot-col-2")
                         img(src="images/fa-solid_quote-left.svg", alt="")
                         .items-quot
                             .item
@@ -114,11 +114,11 @@ html(lang="en")
         section.sec-four 
             .container 
                 div(class="row down-app")
-                    div(class="col-sm-6 c-four-left")
+                    div(class="col-12 col-md-6 c-four-left")
                         img(src="images/mockup1 3.svg")
                         img(src="images/mockup1 3.svg")
                         img(src="images/mockup1 3.svg")
-                    div(class="col-sm-6 c-four-right")
+                    div(class="col-12 col-md-6 c-four-right")
                         h2 Download app to enjoy more!
                         p Amet in elementum nulla scelerisque dui, egestas at. Elit consectetur turpis elementum amet vitae et etiam nec. Varius volutpat hac adipiscing tincidunt pretium.
                         .down-androi-ios 
@@ -129,15 +129,6 @@ html(lang="en")
         //-start footer
         include footer.pug
         //-end footer
-
-
-
-
-
-
-
-
-
-
+        
         // scripts
         script(src="js/main.js") 
