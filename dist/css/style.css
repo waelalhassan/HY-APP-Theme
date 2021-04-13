@@ -96,7 +96,7 @@ header {
   position: relative;
   padding: 70px 0 0 0;
   min-height: 1250px;
-  z-index: 3;
+  z-index: 0;
   background-color: #FFF; }
   .sec-one .grid-two-four {
     height: 800px;
@@ -117,7 +117,8 @@ header {
       width: 380px;
       height: 525px;
       margin: 0 auto;
-      display: grid; }
+      display: grid;
+      z-index: 6; }
       .sec-one .grid-two-four .card img {
         display: block;
         margin: 0 auto; }
@@ -139,8 +140,7 @@ header {
           vertical-align: middle; }
     .sec-one .grid-two-four .card-1 {
       position: relative;
-      grid-area: c-one;
-      z-index: 3; }
+      grid-area: c-one; }
     .sec-one .grid-two-four .card-2 {
       grid-area: c-two;
       box-shadow: 0 20px 40px #4a9ad34d; }
@@ -152,7 +152,7 @@ header {
     top: 0;
     right: 0;
     width: 153px;
-    z-index: -1; }
+    z-index: 5; }
     .sec-one .dt img:nth-of-type(1) {
       right: 10%;
       top: 2%; }
@@ -165,8 +165,7 @@ header {
     .sec-one .dt img:nth-of-type(4) {
       top: -2%; }
     .sec-one .dt img:nth-of-type(5) {
-      top: 15px;
-      z-index: 20; }
+      top: 15px; }
 
 .sec-two {
   background-color: #4a9ad34d;
@@ -190,7 +189,7 @@ header {
 .sec-three {
   position: relative;
   background-color: #FFF;
-  z-index: 3;
+  z-index: 0;
   margin: 100px 0; }
   .sec-three div {
     margin-left: 0;
@@ -251,6 +250,8 @@ header {
     width: 153px; }
 
 .sec-four {
+  position: relative;
+  z-index: 0;
   margin: 100px 0;
   background-color: #FFF; }
   .sec-four .down-app .c-four-left {
@@ -260,19 +261,19 @@ header {
       top: 0;
       left: 50%;
       width: 240px;
-      z-index: 5;
+      z-index: 0;
       transform: translateX(-50%); }
       .sec-four .down-app .c-four-left img:nth-of-type(1) {
         top: 50%;
         left: -10%;
         width: 180px;
-        z-index: 4;
+        z-index: -1;
         transform: translate(50%, -50%); }
       .sec-four .down-app .c-four-left img:nth-of-type(3) {
         top: 50%;
         left: 47%;
         width: 180px;
-        z-index: 4;
+        z-index: -1;
         transform: translate(50%, -50%); }
   .sec-four .down-app .c-four-right {
     display: grid;
@@ -511,8 +512,8 @@ footer {
       width: 130px;
       justify-content: space-between;
       list-style-type: none; }
-    .contact .get-in-touch .info-contact .address-on-map {
-      display: block; }
+    .contact .get-in-touch .info-contact #map {
+      margin: 30px 0; }
   .contact .PreventPlaceholderName .placeholder-name,
   .contact .PreventPlaceholderEmail .placeholder-email {
     transform: translateY(-89px) !important;
@@ -532,12 +533,13 @@ footer {
     overflow: hidden;
     position: relative; }
     header nav {
-      z-index: 100;
       width: 100%; }
       header nav ul {
         position: fixed;
         top: 0;
         left: -100%;
+        left: 0;
+        z-index: 60;
         text-align: center;
         height: 100%;
         width: 50%;
@@ -594,7 +596,7 @@ footer {
       header .hero .sec-2 {
         display: none; }
   .sec-one .grid-two-four {
-    display: unset !important; }
+    display: unset; }
   .sec-one h2 {
     font-size: 1.9em !important; }
   .sec-one .card {
@@ -663,6 +665,16 @@ footer {
         padding: 20px 0;
         justify-content: center;
         width: 100%; } }
+
+#overblur {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 30; }
 
 @media (min-width: 575.98px) and (max-width: 767.98px) {
   header {

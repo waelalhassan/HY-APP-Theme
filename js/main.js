@@ -182,6 +182,7 @@ let headerP = document.querySelector("header");
 let header = document.querySelector("header .menu");
 let nav = document.querySelector("nav");
 let ul = document.querySelector("nav ul");
+let overblur = document.querySelector("#overblur");
 
 let ParentHamburger = document.createElement("div");
 let lineOne = document.createElement("span");
@@ -203,17 +204,14 @@ ul.appendChild(clone)
 if (ParentHamburger) {
     ParentHamburger.addEventListener("click", ()=> {
         ul.style.left = "0"
+        overblur.style.display = "block"
     })
 }
 if (clone) {
     clone.addEventListener("click", ()=> {
         ul.style.left = "-100%"
+        overblur.style.display = "none"
     })
 }
 
 //? end hamburger menu
-
-
-
-
-
