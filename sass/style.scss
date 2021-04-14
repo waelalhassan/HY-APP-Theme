@@ -17,6 +17,7 @@ $linear2-color:#4a9ad300;
 
 body {
     font-family: sans-serif;
+    overflow-x: hidden;
 }
 
 //! start Home Page
@@ -1445,6 +1446,43 @@ footer {
     z-index: 30;
 }
 
-.bibline {
-    display: none;
+//? animation classes
+
+.opacity {
+    opacity: 1;
+    animation: opacity 1s linear;
+    animation-fill-mode: forwards;
 }
+
+@keyframes opacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.PosLeft {
+    position: relative;
+    transform: translateX(-400px);
+    animation: Posleft .7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+
+@keyframes Posleft {
+    from {transform: translateX(-400px);}
+    to {transform: translateY(0);}
+}
+
+.PosRight {
+    position: relative;
+    transform: translateX(400px);
+    animation: PosRight .7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+
+@keyframes PosRight {
+    from {transform: translateX(400px);}
+    to {transform: translateY(0);}
+}
+
+
+
+//? animation classes

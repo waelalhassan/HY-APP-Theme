@@ -219,7 +219,7 @@ if (clone) {
 //? end hamburger menu
 
 //? start effect Writing 
-effectWriting(".hero h2", "100")
+effectWriting(".hero h2", "150")
 function effectWriting(target, speed) {
     // target element
     let Target = document.querySelector(target),
@@ -269,3 +269,46 @@ let EWriting = setInterval(()=> {
 
 }
 //? end effect Writing 
+
+//? start animation on elements 
+animation(".grid-two-four h2", "opacity", "opacity", "0");
+animation(".card:nth-of-type(1)", "opacity", "opacity", "0");
+animation(".card:nth-of-type(2)", "opacity", "opacity", "0");
+animation(".card:nth-of-type(3)", "opacity", "opacity", "0");
+animation(".sec-two h2", "opacity", "opacity", "0");
+animation(".anim-1", "PosLeft", "transform", "translateX(-400px)");
+animation(".anim-2", "opacity", "opacity", "0");
+animation(".anim-3", "PosRight", "transform", "translateX(400px)");
+animation(".sec-three h2", "opacity", "opacity", "0");
+animation(".c-four-left", "PosLeft", "transform", "translateX(-400px)");
+animation(".c-four-right", "PosRight", "transform", "translateX(400px)");
+// simple custom function to animate elements
+function animation(target, className, reProperty, reValue) {
+    // target element
+    let Target = document.querySelector(target);
+    // the element position 
+    let postion = Target.getBoundingClientRect().top - window.innerHeight + 170;
+    // set elements styles for animation work
+    Target.style.cssText = `${reProperty}: ${reValue}`
+    window.addEventListener("scroll", (e)=> {
+        let scroll = window.scrollY;
+        if (scroll > postion) {
+            Target.classList.add(className)
+        }
+    })
+}
+
+let about = document.querySelector("header ul li:nth-of-type(2) a"),
+    target = document.querySelector(".sec-one").getBoundingClientRect().top;
+if (about) {
+    about.addEventListener("click", (e)=> {
+        e.preventDefault();
+        window.scrollTo({
+            top: target,
+            left: 0,
+            behavior: "smooth"
+        })
+    })
+}
+
+//? end animation on elements 
