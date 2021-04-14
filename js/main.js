@@ -105,7 +105,9 @@ theText(WarningEmail, "Please enter your email");
 theText(WarningTextarea, "Leave your message here !");
 
 function theText (ele, text) {
-    ele.textContent = text;
+    if (ele) {
+        ele.textContent = text;
+    }
 };
 // put element before inputs
 insertB(WarningText, InputText);
@@ -215,3 +217,55 @@ if (clone) {
 }
 
 //? end hamburger menu
+
+//? start effect Writing 
+effectWriting(".hero h2", "100")
+function effectWriting(target, speed) {
+    // target element
+    let Target = document.querySelector(target),
+    // create vertical line
+    VerticalLine = document.createElement("span"),
+    // the text of target
+    word = Target.textContent,
+    countOne = 0,
+    countTwo = 0,
+    arr  = ["1", "2"];
+    if (VerticalLine) {
+        VerticalLine.textContent = "|";
+    }
+
+let VLine = setInterval(()=> {
+    countTwo++
+    // if countTwo == number of array return countTwo to 0
+    if (countTwo === arr.length) {
+        countTwo = 0
+    }
+    // if countTwo == 0 set opacity 0 else opacity 1
+    if (countTwo === 0) {
+        VerticalLine.style.opacity = "0"
+    } else {
+        VerticalLine.style.opacity = "0.5"
+    }
+    
+}, speed)
+
+let EWriting = setInterval(()=> {
+        // counter
+    let counter = countOne ++,
+        // Each time increase the letters
+        text = word.substr(0, counter);
+        if (Target) {
+            Target.textContent = text
+        }
+    // if complete the text, stop functions
+    if (word.length === text.length) {
+        clearInterval(EWriting)
+        clearInterval(VLine)
+        VerticalLine.style.opacity = "0"
+    }
+    // append Vertical Line inside target element
+    Target.appendChild(VerticalLine)
+}, speed)
+
+}
+//? end effect Writing 
